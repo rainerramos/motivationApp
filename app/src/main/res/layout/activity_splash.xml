@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#BA426B"
+    android:padding="16dp"
     tools:context=".SplashActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="32sp"
         android:text="Vamos começar?" />
 
 
     <EditText
         android:layout_width="match_parent"
+        android:textSize="25sp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:inputType="text"
         android:hint="Qual o seu nome?"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:gravity="center"
         android:layout_height="wrap_content" />
 
@@ -25,6 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:backgroundTint="#7937ED"
+        android:layout_marginBottom="16dp"
         android:layout_alignParentBottom="true"
         android:text="Salvar" />
 
