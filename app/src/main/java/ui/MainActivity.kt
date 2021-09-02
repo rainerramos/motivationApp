@@ -7,11 +7,13 @@ import com.rainerramos.motivation.R
 import infra.MotivationConstants
 import infra.SecurityPreferences
 import kotlinx.android.synthetic.main.activity_main.*
+import repository.Mock
 
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mSecurityPreferences: SecurityPreferences
+    private var mPhraseFilter : Int = MotivationConstants.PHRASEFILTER.ALL
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +22,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         mSecurityPreferences = SecurityPreferences(this)
         textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+
+        // Lógica inicial de seleção
+        imageAll.setColorFilter(resources.getColor(R.color.black))
+        handleNewPhrase()
 
         buttonNewPhrase.setOnClickListener(this)
         imageAll.setOnClickListener(this)
@@ -48,19 +54,23 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when (id) {
             R.id.imageAll -> {
                 imageAll.setColorFilter(resources.getColor(R.color.black))
+                mPhraseFilter = MotivationConstants.PHRASEFILTER.ALL
+
             }
             R.id.imageHappy -> {
                 imageHappy.setColorFilter(resources.getColor(R.color.black))
+                mPhraseFilter = MotivationConstants.PHRASEFILTER.HAPPY
             }
             R.id.imageMorning -> {
                 imageMorning.setColorFilter(resources.getColor(R.color.black))
+                mPhraseFilter = MotivationConstants.PHRASEFILTER.MORNING
             }
         }
 
     }
 
     private fun handleNewPhrase() {
-
+        textPhrase.text = Mock().getPhrase(mPhraseFilter)
     }
 
 }

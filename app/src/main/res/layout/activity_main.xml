@@ -55,13 +55,14 @@
 
     <TextView
         android:id="@+id/textPhrase"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="32dp"
-        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Frase" />
+        android:layout_centerInParent="true"
+        android:layout_marginTop="32dp"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        android:text="Frase"
+        android:textSize="22sp" />
 
     <View
         android:layout_width="128dp"
