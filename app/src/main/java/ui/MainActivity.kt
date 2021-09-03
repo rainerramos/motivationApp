@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         mSecurityPreferences = SecurityPreferences(this)
-        textName.text = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
+        textName.text = "Olá, $name!"
 
         // Lógica inicial de seleção
         imageAll.setColorFilter(resources.getColor(R.color.black))

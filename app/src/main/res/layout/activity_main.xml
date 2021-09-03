@@ -74,13 +74,13 @@
 
     <Button
         android:id="@+id/buttonNewPhrase"
-        android:layout_width="wrap_content"
-        android:text="Nova frase"
-        android:layout_marginBottom="16dp"
-        android:padding="16dp"
-        android:backgroundTint="#DC7E9E"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content" />
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#DC7E9E"
+        android:padding="16dp"
+        android:text="Nova frase" />
 
 </RelativeLayout>
